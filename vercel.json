@@ -16,11 +16,13 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server/server.js"
+      "dest": "server/server.js",
+      "methods": ["GET", "POST", "OPTIONS"]
     },
     {
       "src": "/(.*)",
-      "dest": "client"
+      "dest": "client",
+      "continue": true
     }
   ]
 }
